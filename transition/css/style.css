@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    /* transition: background-color 1s, height 3s; */
+    transition: all 2s ease-in-out;
+}
+
+.square:hover {
+    background-color: green;
+}
+
+/* Click */
+.square:active {
+    transform: scale(2);
+}

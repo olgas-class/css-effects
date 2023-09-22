@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+  animation: move 10s linear;
+  /* animation-name: color-change;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 3s; */
+  /* animation: color-change 5s linear 3s infinite; */
+}
+
+.square:hover {
+  /* animation: color-change 5s linear 3s infinite; */
+}
+
+.animated {
+  transform: translateX(0%);
+  animation: enter 5s linear;
+}
+
+/* ANIMATIONS */
+
+@keyframes enter {
+  0% {
+    transform: translateX(-100%);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateX(20%);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes color-change {
+  0% {
+    background-color: blue;
+  }
+
+  25% {
+    background-color: green;
+  }
+
+  50% {
+    background-color: fuchsia;
+  }
+
+  75% {
+    background-color: yellow;
+  }
+
+  100% {
+    background-color: blue;
+  }
+}
+
+@keyframes move {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    top: 0;
+    left: calc(100% - 150px);
+    animation-timing-function: ease-out;
+
+    /* left: 100%;
+        transform: translateX(-100%); */
+  }
+
+  50% {
+    top: calc(100% - 150px);
+    left: calc(100% - 150px);
+  }
+
+  75% {
+    top: calc(100% - 150px);
+    left: 0;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
